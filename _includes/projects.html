@@ -1,13 +1,99 @@
 <section>
-  <div class="project-container">
-    {% for project in site.data.settings.projects %}
-      <a href="{{ site.github.url }}/projects/{{ project.url }}">
-        <div class="project-unit" data-folder="{{ site.github.url }}/projects/{{ project.url }}" style="background-image: url({{ site.github.url }}/assets/img/projects/{{ project.url }}/thumbnail.jpg)">
-          <div class="project-overlay">
-            <strong>{{ project.name }} <i class="fa fa-arrow-right" aria-hidden="true"></i></strong>
-          </div>
+    <div class="model-container">
+        <h2>Who am I?</h2>
+
+        <div style="width: 50%; float:right">
+            <div class="sketchfab-embed-wrapper">
+                <iframe title="Grandpa" frameborder="0" allowfullscreen mozallowfullscreen="true"
+                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+                        src="https://sketchfab.com/models/83d8d29ae74e4eb89775c9c0c7bc5e45/embed?autostart=1&camera=0&ui_theme=dark&dnt=1"></iframe>
+            </div>
         </div>
-      </a>
-    {% endfor %}
-  </div>
+        <div style="width: 50%; float:right">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+        </div>
+
+        <div style="clear: both; ">
+            <!-- Empty div with clear: both for spacing -->
+        </div>
+    </div>
+
+    <div class="project-container">
+        <h2>Projects</h2>
+        {% for project in site.data.settings.projects %}
+        <a href="{{ site.github.url }}/projects/{{ project.url }}">
+            <div class="project-unit" data-folder="{{ site.github.url }}/projects/{{ project.url }}"
+                 style="width: 40%; float:left; background-image: url({{ site.github.url }}/assets/img/projects/{{ project.url }}/thumbnail.jpg)">
+                <div class="project-overlay">
+                    <strong>{{ project.name }} <i class="fa fa-arrow-right" aria-hidden="true"></i></strong>
+                </div>
+            </div>
+        </a>
+        <div style="width: 55%; float:right">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut
+        </div>
+        <div style="clear: both; "><br></div>
+
+        {% endfor %}
+
+        <!--        {% for project in site.data.settings.projects2 %}-->
+        <!--        <a href="{{ site.github.url }}/projects/{{ project.url }}">-->
+        <!--            <div class="project-unit" data-folder="{{ site.github.url }}/projects/{{ project.url }}"-->
+        <!--                 style="width: 33.33%; float:left; background-image: url({{ site.github.url }}/assets/img/projects/{{ project.url }}/thumbnail.jpg)">-->
+        <!--                <div class="project-overlay">-->
+        <!--                    <strong>{{ project.name }} <i class="fa fa-arrow-right" aria-hidden="true"></i></strong>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </a>-->
+        <!--        {% endfor %}-->
+    </div>
+
+    <div class="achievements-container">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Being mentioned in Yannic Kilcher's <a
+                    href="https://www.youtube.com/watch?v=xs-0cp1hSnY&t=1457s&ab_channel=YannicKilcher">ML News!</a>
+            </li>
+            <li>Finalist of <a
+                    href="https://www.uw.edu.pl/nomagic-warsaw-mimotaurs-finalistami-konkursu-mbzirc/">MBZIRC</a> (and
+                still going!)
+            </li>
+            <li>Oral presentation of ANTS on IJCNN 22</li>
+            <li>Silver medal at <a href="https://www.kaggle.com/c/google-football/leaderboard">Kaggle Google Research
+                Football</a> (LewandowskiGolDlaPolski team)
+            </li>
+            <li>Mathematical Olympiad <a
+                    href="https://om.sem.edu.pl/previous_olympiads/#68@Lista_finalistw">finalist</a></li>
+        </ul>
+    </div>
+
+    <div class="publicationc-container">
+        <h2>Publications</h2>
+        <ul>
+            <li>
+                Focused transformer: Contrastive training for context scaling<br>
+                S. Tworkowski, K. Staniszewski, M. Pacek, Y. Wu, H. Michalewski, P. Miłoś<br>
+                NeurIPS'23
+                (<a href="https://arxiv.org/abs/2307.03170">arXiv</a>)
+                (<a href="https://twitter.com/s_tworkowski/status/1677125863429795840">twitter thread</a>)
+            </li>
+            <li>
+                Planning and Learning Using Adaptive Entropy Tree Search<br>
+                P. Kozakowski, M. Pacek, P. Miłoś<br>
+                IJCNN'22 (<a href="https://arxiv.org/abs/2102.06808">arXiv</a>)
+            </li>
+            <li>
+                Curriculum and Decentralized Learning in Google Research Football<br>
+                W. Domirz, M. Mikuła, Z. Opała, M. Pacek, M. Rychlicki, M. Sieniawski, <br>
+                K. Staniszewski, H. Michalewski, P. Miłoś, B. Osiński<br>
+                BayLearn'20 (<a href="https://www.youtube.com/watch?v=bFrcbXWTkSI&ab_channel=BayLearn">yt</a>)
+            </li>
+        </ul>
+    </div>
 </section>
